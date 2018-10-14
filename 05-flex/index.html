@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex</title>
+  <style>
+  body,html{
+    height: 100px;
+  }
+
+  .father{
+    display: flex;
+    /* flex를 파더에 적용하면 박스(칠드런)들을 일일히 설정할 필요 없이 알아서 크기에 맞춰 조정됨.개이득이죠 */
+    /* 더이상 박스에 인라인 블럭 설정해서 마진값등을 설정할 필요가 없다는 말씀 */
+
+    /* justify-content는 수평, align-items은 수직 */
+    justify-content: center;
+    /* 박스가 가로로 가운데에 위치함 ㅁㅁㅁ */
+    /* justify-content: space-between; 이렇게 하면 좌우로 끝까지 사용하여 균등하게 박스 배치 ㅁ  ㅁ  ㅁ */
+    /* justify-content: space-around; 이렇게 하면 좌우 간격까지 균등하게 박스 배치  ㅁ ㅁ ㅁ  */
+    align-items: center;
+    /* 박스가 세로로 가운데에 위치함 */
+    /* align-items: flex-start 이렇게 하면 세로에서 제일 위로 위치함 */
+    /* align-items: flex-end 이렇게 하면 세로에서 제일 아래로 위치함 */
+    height: 100px;
+
+    flex-direction: column;
+    /* 만약 우리가 박스를 수평으로 나열하는 것 말고 수직으로 세워서 정렬하고 싶으면 flex-direction : column;을 사용 */
+    /* column으로 설정 안하고 row로 설정하면, 이 코드를 안쓰는 것과 똑같은 수평으로 나열됨(즉 기본값이란 말!) */
+    /* 즉, 우리가 column으로 지정하게 되면 justify-content와 align-items의 역할이 뒤바뀜(위아래,좌우의 역할이 바뀜) */
+
+    flex-wrap: wrap;
+    /* 플렉스랩을 랩으로 하면 화면을 줄일때 박스 폭은 유지, 기본값은 노랩이라서 폭도 같이 줄어듬 */
+    /* flex-wrap: wrap-reverse;로 하게 되면 박스 순서가 거꾸로 됨 123에서 321로 됨 */
+    /* 랩을 사용 안하고 거꾸로 하고 싶으면 flex-direction의 값을 column-reverse나 row-reverse로 하면 됨. 개꿀이죠? */
+  }
+  .box{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    /* 칠드런인 박스에 플렉스를 지정하는 것은 박스 안의 숫자를 조정하기 위함 */
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+  </div>
+
+</body>
+</html>

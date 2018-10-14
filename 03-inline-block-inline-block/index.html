@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inline Example</title>
+  <style>
+  .box{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    display: inline-block;
+    /* 여기에 inline이든 block이든 inline-block쓰면됨 */
+  }
+  </style>
+</head>
+<body>
+  <span class="box">1</span>
+  <span class="box">1</span>
+  <span class="box">1</span>
+
+</body>
+</html>
+
+
+<!-- block은 옆에 박스가 있는 것을 허락하지 않는다 -->
+<!-- inline-block은 박스가 옆으로 나란히, inline과 같은 설정을 원하면서 박스형태를 유지하고 싶을때 쓰임 -->
+<!-- inline이라 하면 텍스트이다. div가 아니라 span이랑 쓰이며 길이로 표현됨 -->

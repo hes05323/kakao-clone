@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Box Model</title>
+  <style>
+  body,html{
+    padding: 0;
+    margin: 0;
+    background-color: green;
+    height: 100%;
+    }
+    .box{
+      background-color: yellow;
+      width: 50%;
+      height: 50%;
+      /* padding: 20px 30px;  패딩을 상하20, 좌우30주고 싶을때 */
+      /* padding: 5px 4px 3px 2px;  패딩을 상5, 우4, 하3, 좌2 주고싶을때*/
+      padding: 50px;
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+    .inside-box{
+      background-color: blue;
+      width: 50%;
+      height: 50%;
+      border-width: 15px;
+      border-color: red;
+      border-style: dashed;
+      /* border: 5px solid red; 위의 보더 세줄을 한줄로..물론 점선말고 실성으로~*/
+    }
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="inside-box"></div>
+  </div>
+  </body>
+</html>

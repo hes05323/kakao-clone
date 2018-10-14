@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Position</title>
+  <style>
+  body,html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    height: 400%;
+    background-color: red;
+  }
+/* Position Fixed : static은 기본값, fixed는 화면에 오버랩되어 고정
+#boxOne{
+  height: 300px;
+  width: 300px;
+  background-color: yellow;
+  position: static;
+}
+#boxTwo{
+  height: 300px;
+  width: 300px;
+  background-color: green;
+  position: fixed;
+  bottom: 10px;
+} */
+.abs-box{
+  height: 400px;
+  width: 400px;
+  background-color: yellow;
+  position: relative;
+}
+.abs-child{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  position: absolute;
+  right: 30px;
+}
+/* position의 absolute는 relative에 해당하는 박스가 있으면 그에 맞춰 위치가 결정되고 그렇지 기본 body에 맞춰 위치가 설정됨 */
+/* 부모 포지션(relative)이 설정되면 absolute는 부모값 안에서만 위치함 */
+  </style>
+</head>
+<div class="abs-box">
+  <div class="abs-child"></div>
+</div>
+<!-- <body>
+  <div id="boxOne">
+    <div class="box-child"></div>
+  </div>
+  <div id="boxTwo">
+    <div class="box-child"></div>
+  </div> -->
+
+</body>
+</html>
